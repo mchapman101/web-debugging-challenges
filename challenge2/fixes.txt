@@ -1,0 +1,11 @@
+Error Report:
+
+1) needed to install npm Dependencies
+
+2) server.js  2-:35 -- SightingCtrl.read was misspelled
+
+3) SightingCtrl.js 21:11 -- added "else" statement to enclose the res.status statement on line 22
+
+4) user.json 16:1 -- deleted extra name "john"
+
+5) Server.js 16:1 - unresolved error: "Error: Can't set headers after they are sent." To my understanding, the issue lies in the fact that expess is sending headers twice through the cors middleware. I cannot ascertain which aspect of the code is sending the header twice, so I commented line 16 out. I don't think this is a correct fix, but it appears to eliminate the error, but I don't think it solved the issue. 

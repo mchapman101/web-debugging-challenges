@@ -1,0 +1,13 @@
+This is a report on the bugs I encountered:
+
+1) Index.html: Line 31: 103 -- opening script tag was not closed -- added a > to close it
+
+2) app.js: 1:31 -- Angular dependency "ui Router" was misspelled. Should be 'ui.router'
+
+3) app.js: 3:33 -- added $urlRouterProvider to the ui-router config line
+
+4) app.js 9:10, 11:26, 17:27 -- all .state parameters should have the opening curly bracket "{" inside the first set of round brackets after a comma.
+
+5) app.js 15:9 -- extra set of brackets, moved to line 22 to complete the .config function.
+
+6) productsCtrl 1:88 -- unmatched bracket, added another bracket to line 9 to compensate

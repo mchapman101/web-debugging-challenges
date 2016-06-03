@@ -13,14 +13,14 @@ module.exports = {
   },
 
   read: function (req, res) {
-    console.log('req.query: ', req.query);
     Sighting.find(req.query)
       .populate('user', 'username')
       .exec(function (err, result) {
         if (!err) {
           res.send(result);
-        }
+        } else {
         res.status(500).send(err);
+      }
       });
   },
 
